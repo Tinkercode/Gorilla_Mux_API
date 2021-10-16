@@ -1,0 +1,32 @@
+syntax = "proto3";
+package assignment;
+option go_package="./assignmentpb";
+
+message GetRequest {
+    int32 UserId =1;
+}
+
+message GetResponse {
+    string Firstname =1;
+    string Lastname=2;
+    string Email =3;
+    int32 ID =4;
+    string Designation=5;
+}
+
+message PostRequest{
+    string Firstname =1;
+    string Lastname=2;
+    string Email =3;
+    string Designation=4;
+}
+
+message PostResponse{
+    int32 ID =1;
+}
+
+message PatchRequest{
+    int32 UserId =1;
+    string Email =2;
+}
+
